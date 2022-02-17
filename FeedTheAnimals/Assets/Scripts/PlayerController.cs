@@ -41,8 +41,8 @@ public class PlayerController : MonoBehaviour
         */
 
         //to keep player inbound(inside the screen)
-        if(transform.position.x < -_bound ) transform.position = new Vector3(-14 , transform.position.y , transform.position.z);
-        if(transform.position.x > _bound ) transform.position = new Vector3(14 , transform.position.y , transform.position.z);
+        if(transform.position.x < -_bound ) transform.position = new Vector3(-_bound , transform.position.y , transform.position.z);
+        if(transform.position.x > _bound ) transform.position = new Vector3(_bound , transform.position.y , transform.position.z);
 
        
     }
