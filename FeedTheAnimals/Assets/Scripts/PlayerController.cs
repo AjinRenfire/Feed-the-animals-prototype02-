@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
-  Naming convention used
-  - PascalCasing for public variables
-  - _camelCasing for public or protected variables
-  - camelCasing for local varibles
 
-*/
+
+
+
+
+//this is where most of the people come first , here's a tip if you don't understand the naming convention see README.md
+//If you don't know README.md is you are not quanlified to come here
+
+
+
 public class PlayerController : MonoBehaviour
 {
     float _horizontalInput;
