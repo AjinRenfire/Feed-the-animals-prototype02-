@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/*
+  Naming convention used
+  - PascalCasing for public variables
+  - _camelCasing for public or protected variables
+  - camelCasing for local varibles
 
+*/
 public class PlayerController : MonoBehaviour
 {
-    float HorizontalInput;
+    float _horizontalInput;
     public float Speed;
     // Start is called before the first frame update
+    float _bound = 14f;
     void Start()
     {
         
@@ -17,8 +24,8 @@ public class PlayerController : MonoBehaviour
     {
 
          //movement 
-        HorizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.right * HorizontalInput * Time.deltaTime * Speed);
+        _horizontalInput = Input.GetAxis("Horizontal");
+        transform.Translate(Vector3.right * _horizontalInput * Time.deltaTime * Speed);
 
         /*
             We did the movement of the player and then we checked bounds , because...
@@ -31,8 +38,8 @@ public class PlayerController : MonoBehaviour
         */
 
         //to keep player inbound(inside the screen)
-        if(transform.position.x < -14 ) transform.position = new Vector3(-14 , transform.position.y , transform.position.z);
-        if(transform.position.x > 14 ) transform.position = new Vector3(14 , transform.position.y , transform.position.z);
+        if(transform.position.x < -_bound ) transform.position = new Vector3(-14 , transform.position.y , transform.position.z);
+        if(transform.position.x > _bound ) transform.position = new Vector3(14 , transform.position.y , transform.position.z);
 
        
     }
