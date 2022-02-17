@@ -7,7 +7,7 @@ using UnityEngine;
 
 
 // this is where most of the people come first , here's a tip if you don't understand the naming convention see README.md
-// If you don't know README.md is you are not quanlified to come here
+// If you don't know what README.md is you are not quanlified to come here
 
 
 
