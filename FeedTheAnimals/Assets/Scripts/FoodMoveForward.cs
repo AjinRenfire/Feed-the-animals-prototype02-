@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FoodMoveForward : MonoBehaviour
-{
-    // Start is called before the first frame update
+public class FoodMoveForward : MonoBehaviour {
+    
     public float Speed;
-    void Start()
-    {
+    // Start is called before the first frame update
+    void Start() {
         
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         transform.Translate(Vector3.forward * Time.deltaTime * Speed);
     }
 }

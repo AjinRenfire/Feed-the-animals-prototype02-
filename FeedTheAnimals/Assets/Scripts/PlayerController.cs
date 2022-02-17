@@ -11,25 +11,31 @@ using UnityEngine;
 
 
 
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour {
     float _horizontalInput;
     public float Speed;
-    // Start is called before the first frame update
+   
     float _bound = 14f;
-    void Start()
-    {
+
+
+    public GameObject FoodProjectile;
+
+     // Start is called before the first frame update
+    void Start() {
         
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
 
          //movement 
         _horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * _horizontalInput * Time.deltaTime * Speed);
 
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            //launch food
+
+        }
         /*
             We did the movement of the player and then we checked bounds , because...
                 - When movement is done after the bound check , the player position may go beyond the bound values .Only in 
