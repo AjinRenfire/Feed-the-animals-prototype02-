@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour {
     float _bound = 14f;
 
 
-    public GameObject FoodProjectile;
+    public GameObject FoodProjectilePrefab;
 
      // Start is called before the first frame update
     void Start() {
@@ -33,9 +33,11 @@ public class PlayerController : MonoBehaviour {
         transform.Translate(Vector3.right * _horizontalInput * Time.deltaTime * Speed);
 
         if(Input.GetKeyDown(KeyCode.Space)) {
-            //launch food
+            Instantiate(FoodProjectilePrefab , transform.position , FoodProjectilePrefab.transform.rotation);
 
         }
+
+
         /*
             We did the movement of the player and then we checked bounds , because...
                 - When movement is done after the bound check , the player position may go beyond the bound values .Only in 
